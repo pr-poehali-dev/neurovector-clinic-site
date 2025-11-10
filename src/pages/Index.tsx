@@ -29,23 +29,7 @@ const Index = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Доктор Анна Соколова",
-      role: "Детский психиатр, невролог",
-      experience: "15 лет опыта работы с РАС"
-    },
-    {
-      name: "Доктор Михаил Петров",
-      role: "Клинический психолог",
-      experience: "12 лет в детской психотерапии"
-    },
-    {
-      name: "Доктор Елена Иванова",
-      role: "Нейропсихолог",
-      experience: "10 лет в нейрокоррекции"
-    }
-  ];
+
 
   const articles = [
     {
@@ -76,9 +60,8 @@ const Index = () => {
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Icon name="Brain" className="text-primary" size={32} />
-              <span className="text-2xl font-bold text-primary">NeuroVector</span>
+            <div className="flex items-center gap-3">
+              <img src="https://cdn.poehali.dev/files/e4d0bd14-6b90-41b7-878a-f7ac19a006af.jpeg" alt="NeuroVector" className="h-12" />
             </div>
             <div className="hidden md:flex gap-6">
               <button 
@@ -219,29 +202,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="mt-20">
-            <h3 className="text-3xl font-bold text-center mb-12 animate-fade-in">Наша команда</h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <Card 
-                  key={index}
-                  className="text-center hover:shadow-lg transition-all duration-300 animate-scale-in"
-                  style={{ animationDelay: `${index * 0.15}s` }}
-                >
-                  <CardHeader>
-                    <div className="w-24 h-24 rounded-full bg-primary/10 mx-auto mb-4 flex items-center justify-center">
-                      <Icon name="User" className="text-primary" size={40} />
-                    </div>
-                    <CardTitle className="text-xl">{member.name}</CardTitle>
-                    <CardDescription className="text-base">{member.role}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{member.experience}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -312,9 +273,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Icon name="Brain" className="text-primary" size={28} />
-                <span className="text-xl font-bold">NeuroVector</span>
+              <div className="mb-4">
+                <img src="https://cdn.poehali.dev/files/e4d0bd14-6b90-41b7-878a-f7ac19a006af.jpeg" alt="NeuroVector" className="h-16" />
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Детская клиника нейроразвития, психиатрии и психотерапии
