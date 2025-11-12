@@ -61,7 +61,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="https://cdn.poehali.dev/files/e4d0bd14-6b90-41b7-878a-f7ac19a006af.jpeg" alt="NeuroVector" className="h-12" />
+              <img src="https://cdn.poehali.dev/files/e4d0bd14-6b90-41b7-878a-f7ac19a006af.jpeg" alt="NeuroVector" className="h-12 animate-float-in" />
             </div>
             <div className="hidden md:flex gap-6">
               <button 
