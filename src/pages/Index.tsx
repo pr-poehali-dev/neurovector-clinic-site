@@ -71,10 +71,10 @@ const Index = () => {
                 Главная
               </button>
               <button 
-                onClick={() => scrollToSection('about')}
-                className={`text-sm font-medium transition-colors hover:text-primary ${activeSection === 'about' ? 'text-primary' : 'text-foreground'}`}
+                onClick={() => scrollToSection('product')}
+                className={`text-sm font-medium transition-colors hover:text-primary ${activeSection === 'product' ? 'text-primary' : 'text-foreground'}`}
               >
-                О клинике
+                Наш продукт
               </button>
               <button 
                 onClick={() => scrollToSection('blog')}
@@ -83,9 +83,7 @@ const Index = () => {
                 Блог и статьи
               </button>
             </div>
-            <Button className="hidden md:flex">
-              Записаться на приём
-            </Button>
+
           </div>
         </div>
       </nav>
@@ -102,16 +100,7 @@ const Index = () => {
                 Специализированная клиника нейроразвития, психиатрии и психотерапии. 
                 Помогаем детям с РАС и другими особенностями развития раскрыть свой потенциал.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg">
-                  <Icon name="Calendar" className="mr-2" size={20} />
-                  Записаться на консультацию
-                </Button>
-                <Button size="lg" variant="outline" className="text-lg">
-                  <Icon name="Phone" className="mr-2" size={20} />
-                  Позвонить нам
-                </Button>
-              </div>
+
             </div>
             <div className="animate-slide-up">
               <img 
@@ -124,10 +113,10 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-secondary/30">
+      <section id="product" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Наши направления</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Наш продукт</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Комплексный подход к развитию и здоровью ребёнка
             </p>
@@ -156,55 +145,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-up">
-              <img 
-                src="https://cdn.poehali.dev/projects/d5908dd5-51f8-41d6-95f3-34a3ea7454ad/files/3ca3e5cb-7901-401a-a05f-864a1a3b65e7.jpg" 
-                alt="О клинике" 
-                className="rounded-3xl shadow-xl w-full"
-              />
-            </div>
-            <div className="animate-fade-in">
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">О клинике NeuroVector</h2>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Мы специализируемся на работе с детьми с особенностями нейроразвития, 
-                включая расстройства аутистического спектра, СДВГ, задержки развития и эмоциональные нарушения.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Наш подход основан на доказательных методах и индивидуальной программе для каждого ребёнка. 
-                Мы работаем в тесном контакте с семьёй, обеспечивая непрерывную поддержку и обучение родителей.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Icon name="CheckCircle" className="text-primary mt-1" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Доказательная медицина</h3>
-                    <p className="text-muted-foreground">Методы с подтвержденной эффективностью</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="CheckCircle" className="text-primary mt-1" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Индивидуальный подход</h3>
-                    <p className="text-muted-foreground">Программа разрабатывается для каждого ребёнка</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Icon name="CheckCircle" className="text-primary mt-1" size={24} />
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">Поддержка семьи</h3>
-                    <p className="text-muted-foreground">Обучение и консультации для родителей</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-
-        </div>
-      </section>
 
       <section id="blog" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
@@ -245,29 +186,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto animate-fade-in">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Готовы начать путь к развитию?
-            </h2>
-            <p className="text-lg mb-8 opacity-90 leading-relaxed">
-              Запишитесь на первую консультацию и получите профессиональную оценку 
-              развития вашего ребёнка и индивидуальный план работы
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="text-lg">
-                <Icon name="Calendar" className="mr-2" size={20} />
-                Записаться на приём
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary">
-                <Icon name="MessageCircle" className="mr-2" size={20} />
-                Задать вопрос
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <footer className="py-12 bg-foreground/5 border-t border-border">
         <div className="container mx-auto px-4">
@@ -289,8 +208,8 @@ const Index = () => {
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('about')} className="text-muted-foreground hover:text-primary transition-colors">
-                    О клинике
+                  <button onClick={() => scrollToSection('product')} className="text-muted-foreground hover:text-primary transition-colors">
+                    Наш продукт
                   </button>
                 </li>
                 <li>
